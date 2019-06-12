@@ -13,23 +13,25 @@ http://blog.gssxgss.me/try-finagle-1/
 
 
 import com.twitter.app.App
+
 import com.twitter.finagle.channel.{IdleConnectionFilter, OpenConnectionsThresholds}
+
 import com.twitter.finagle.filter.MaskCancelFilter
+
 import com.twitter.finagle.http.HttpMuxer
+
 import com.twitter.finagle.service.TimeoutFilter
+
 import com.twitter.finagle.util.DefaultTimer
+
 import com.twitter.finagle._
+
 import com.twitter.server.{Admin, AdminHttpServer, Lifecycle, Stats}
+
 import com.twitter.util.{Await, Duration, Future}
-import de.bid.{BidService, NoBidException}
-import de.clients.dsclient.LoadCache
-import de.win.{WinService, HandleExceptions => winHandleExceptions}
-import de.cache.DBLoader
-import de.clients.{DCClient, JedisConnectionPool, RSClient}
-import de.debug.{Debug, DebugHandler, HackObject}
-import de.exchange.google.GoogleAdxIp
-import de.utils._
+
 import org.jboss.netty.handler.codec.http.HttpResponseStatus._
+
 import org.jboss.netty.handler.codec.http.{HttpHeaders, HttpRequest, HttpResponse, HttpResponseStatus}
 
 
